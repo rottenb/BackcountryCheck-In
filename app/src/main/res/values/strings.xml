@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Backcountry Check-In</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <!-- card view items -->
+    <string name="card_map_description">Preview of map</string>
+    <string name="card_title">Lorem Ipsum - Dolor Sit Amet</string>
+    <string name="card_summary">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+        architecto beatae vitae dicta sunt explicabo!
+    </string>
+</resources>
