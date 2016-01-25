@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
+        mToolbar.setPadding(0, getStatusBarHeight(), 0, 0);
 
         mDrawerRecyclerView = (RecyclerView) findViewById(R.id.drawer_recyclerview);
         mDrawerRecyclerView.setHasFixedSize(true);
@@ -100,5 +101,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+
+        if (resourceId < 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+
+        return result;
     }
 }
