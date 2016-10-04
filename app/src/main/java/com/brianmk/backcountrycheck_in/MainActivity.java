@@ -1,6 +1,8 @@
 package com.brianmk.backcountrycheck_in;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +16,8 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
-    protected static final String[] DRAWER_NAMES = {"Create", "Edit", "Sort", "View", "About", "Settings" };
+    protected static final String[] DRAWER_NAMES = {"Create Trip", "Edit User", "Sort Trips",
+                                                     "View", "About", "Settings" };
     protected static final int[] DRAWER_ICONS = {android.R.drawable.ic_menu_mapmode,
                                     android.R.drawable.ic_menu_close_clear_cancel,
                                     android.R.drawable.ic_menu_mylocation,
@@ -40,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        mToolbar.setPadding(0, getStatusBarHeight(), 0, 0);
 
         mDrawerRecyclerView = (RecyclerView) findViewById(R.id.drawer_recyclerview);
         mDrawerRecyclerView.setHasFixedSize(true);
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
 
-/*
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Adds a new trip", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        }); */
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+    //    getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -103,14 +105,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public int getStatusBarHeight() {
-        int result = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-
-        if (resourceId < 0) {
-            result = getResources().getDimensionPixelSize(resourceId);
-        }
-
-        return result;
-    }
 }

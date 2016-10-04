@@ -47,7 +47,8 @@ public class MainActivityFragment extends Fragment {
         cardGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent tripIntent = new Intent(getActivity(), TripDetail.class);
+                Intent tripIntent = new Intent(getActivity(), TripDetailActivity.class);
+                startActivity(tripIntent);
             }
         });
 

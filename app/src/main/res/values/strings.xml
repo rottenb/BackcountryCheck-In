@@ -13,4 +13,9 @@
         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
         architecto beatae vitae dicta sunt explicabo!
     </string>
+
+    <!-- trip detail -->
+    <string name="title_activity_detail">Trip Detail</string>
+    <string name="trip_title" translatable="false">North Vancouver</string>
+    <string name="trip_trailhead" translatable="false">Baden Powell</string>
 </resources>

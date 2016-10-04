@@ -1,6 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:icon="@mipmap/ic_launcher"
+    android:theme="@style/AppTheme"
+    android:background="#ffffff"
+    tools:context="com.brianmk.showtime.DetailActivity">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:id="@+id/appbar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/trip_map"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:cropToPadding="true"
+                android:src="@drawable/north_van_bdn_pwll"
+                android:padding="6dp"/>
+
+            <TextView
+                android:id="@+id/trailhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trip_map"
+                android:padding="6dp"
+                android:text="Trailhead:"
+                android:textSize="@dimen/trip_title_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/trip_trailhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/trip_map"
+                android:text="@string/trip_trailhead"
+                android:textSize="@dimen/trip_title_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="6dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/who"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trailhead"
+                android:padding="6dp"
+                android:text="Who:"
+                android:textSize="@dimen/trip_title_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/trip_who1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/trip_trailhead"
+                android:text="Brian"
+                android:textSize="@dimen/trip_title_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/trip_who2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/trip_who1"
+                android:text="Kay"
+                android:textSize="@dimen/trip_title_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/trip_who3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/trip_who2"
+                android:text="James"
+                android:textSize="@dimen/trip_title_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/when"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trip_who3"
+                android:padding="6dp"
+                android:text="When:"
+                android:textSize="@dimen/trip_title_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/trip_when"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/trip_who3"
+                android:text="23JAN2016 13:30"
+                android:textSize="@dimen/trip_title_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="6dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/est_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/when"
+                android:padding="6dp"
+                android:text="Est Return:"
+                android:textSize="@dimen/trip_title_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/trip_est_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/trip_when"
+                android:text="23JAN2016 17:30"
+                android:textSize="@dimen/trip_title_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/overdue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/est_return"
+                android:padding="6dp"
+                android:text="Overdue:"
+                android:textSize="@dimen/trip_title_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/trip_overdue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/trip_est_return"
+                android:text="23JAN2016 20:30"
+                android:textSize="@dimen/trip_title_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="12dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
