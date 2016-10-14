@@ -8,7 +8,7 @@
     android:icon="@mipmap/ic_launcher"
     android:theme="@style/AppTheme"
     android:background="#ffffff"
-    tools:context="com.brianmk.showtime.DetailActivity">
+    tools:context="com.brianmk.backcountrycheck_in.TripDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
